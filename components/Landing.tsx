@@ -1,5 +1,13 @@
-import { actionBtns, cardsDetails, eventDetails, leftSideCards } from "@/constants/landing";
+"use client";
+
+import {
+  actionBtns,
+  cardsDetails,
+  eventDetails,
+  leftSideCards,
+} from "@/constants/landing";
 import Image from "next/image";
+import { motion } from "motion/react";
 
 export default function Landing() {
   return (
@@ -7,22 +15,65 @@ export default function Landing() {
       <div className="container mx-auto flex max-lg:flex-col items-center justify-between max-lg:justify-center p-8 max-lg:px-0">
         <div className="right max-lg:flex items-center gap-4 px-4">
           <div className="content">
-            <span className="font-bold text-[#E2AE63] mb-2">
+            <motion.span
+              initial={{
+                opacity: 0,
+                transform: "translate(20px, 0)",
+                transition: {
+                  duration: 500,
+                  delay: 500,
+                },
+              }}
+              animate={{ opacity: 1, transform: "translate(0, 0)" }}
+            className="font-bold text-[#E2AE63] mb-2">
               الفعالية القادمة
-            </span>
-            <h2 className="title text-[32px] max-md:text-[18px] font-bold leading-[1.4] mb-4 text-white">
-              المؤتمر العالمي للابحاث <br /> والمعلومات والابتكار في <br /> القطاع
-              الخيري (أبحاث)
-            </h2>
-            <div className="event-details grid gap-2 max-md:text-[14px]">
+            </motion.span>
+            <motion.h2
+            initial={{
+              opacity: 0,
+              transform: "translate(20px, 0)",
+              transition: {
+                duration: 1000,
+                delay: 1000,
+              },
+            }}
+            animate={{ opacity: 1, transform: "translate(0, 0)" }}
+            className="title text-[32px] max-md:text-[18px] font-bold leading-[1.4] mb-4 text-white">
+              المؤتمر العالمي للابحاث <br /> والمعلومات والابتكار في <br />{" "}
+              القطاع الخيري (أبحاث)
+            </motion.h2>
+            <motion.div
+            initial={{
+              opacity: 0,
+              transform: "translate(20px, 0)",
+              transition: {
+                duration: 1500,
+                delay: 1500,
+              },
+            }}
+            animate={{ opacity: 1, transform: "translate(0, 0)" }}
+            className="event-details grid gap-2 max-md:text-[14px]">
               {eventDetails.map((ele, index) => (
-                <div className="detail-card flex items-center gap-2" key={index}>
+                <div
+                  className="detail-card flex items-center gap-2"
+                  key={index}
+                >
                   <div className="icon text-[#E2AE63]">{ele.icon}</div>
                   <span className="font-bold text-white">{ele.text}</span>
                 </div>
               ))}
-            </div>
-            <div className="action-btns flex gap-3 items-center mt-8 max-md:text-[14px]">
+            </motion.div>
+            <motion.div
+            initial={{
+              opacity: 0,
+              transform: "translate(20px, 0)",
+              transition: {
+                duration: 2000,
+                delay: 2500,
+              },
+            }}
+            animate={{ opacity: 1, transform: "translate(0, 0)" }}
+            className="action-btns flex gap-3 items-center mt-8 max-md:text-[14px]">
               {actionBtns.map((ele, index) => (
                 <button
                   type="button"
@@ -36,25 +87,46 @@ export default function Landing() {
                   {ele.favourite ? ele.icon : ele.text}
                 </button>
               ))}
-            </div>
+            </motion.div>
           </div>
           <div className="card-group flex max-lg:flex-col items-center gap-3 text-center mt-8">
             {cardsDetails.map((ele, index) => (
-              <div
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  transform: "translate(10px, 0)",
+                  transition: {
+                    duration: 1000,
+                    delay: (index * 1000),
+                  },
+                }}
+                animate={{ opacity: 1, transform: "translate(0, 0)" }}
                 className="card w-[80px] h-[80px] max-md:w-[55px] max-md:h-[55px] bg-white rounded-md flex items-center justify-center flex-col"
                 key={index}
               >
                 <span className="text-[#E2AE63] font-bold text-[20px] max-md:text-[16px]">
                   {ele.count}
                 </span>
-                <span className="text-[14px] max-md:text-[12px] font-light">{ele.text}</span>
-              </div>
+                <span className="text-[14px] max-md:text-[12px] font-light">
+                  {ele.text}
+                </span>
+              </motion.div>
             ))}
           </div>
         </div>
         <div className="left lg:mr-6">
           <div className="card-content grid gap-4 w-[100%]">
-            <div className="card w-full max-lg:my-5 max-lg:rounded-[0] p-8 rounded-lg backdrop-blur-xs bg-linear-to-r from-[#ffffff2a] to-[#e2ad636f]">
+            <motion.div
+            initial={{
+              opacity: 0,
+              transform: "translate(-20px, 0)",
+              transition: {
+                duration: 1000,
+                delay: 1500,
+              },
+            }}
+            animate={{ opacity: 1, transform: "translate(0, 0)" }}
+            className="card w-full max-lg:my-5 max-lg:rounded-[0] p-8 rounded-lg backdrop-blur-xs bg-linear-to-r from-[#ffffff2a] to-[#e2ad636f]">
               <h3 className="text-[#E2AE63] font-bold mb-2">عن الفعاليه</h3>
               <p className="text-white leading-[1.5] text-[24px] max-lg:text-[18px]">
                 انطلاقاً من أهداف رؤيـة المملكـة العربيـة السعوديـة 2030 في
@@ -62,14 +134,34 @@ export default function Landing() {
                 القطاع للقيام بأدوارها التنمويـة وزيـادة مساهمتها فـي الناتـج
                 المحلي الإجمالي
               </p>
-            </div>
+            </motion.div>
             <div className="card-group grid gap-4 lg:grid-cols-2 max-lg:px-4 max-lg:absolute max-lg:bottom-[-100px] max-lg:left-2/4 max-lg:-translate-x-2/4 max-md:w-[360px]">
-              { leftSideCards.map((ele, index) => (
-                <div className={`card rounded-lg overflow-hidden h-[210px] flex items-center justify-center ${index == 1 && "max-lg:hidden"}`} key={index}>
-                  <Image src={ele.url} alt="Card Image" width={400} height={400} className="object-cover h-full"  />
-                </div>
-              )) }
-            </div> 
+              {leftSideCards.map((ele, index) => (
+                <motion.div
+                  initial={{
+                    opacity: 0,
+                    transform: "translate(-20px, 0)",
+                    transition: {
+                      duration: 1000,
+                      delay: 2500,
+                    },
+                  }}
+                  animate={{ opacity: 1, transform: "translate(0, 0)" }}
+                  className={`card rounded-lg overflow-hidden h-[210px] flex items-center justify-center ${
+                    index == 1 && "max-lg:hidden"
+                  }`}
+                  key={index}
+                >
+                  <Image
+                    src={ele.url}
+                    alt="Card Image"
+                    width={400}
+                    height={400}
+                    className="object-cover h-full"
+                  />
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
