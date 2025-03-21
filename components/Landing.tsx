@@ -10,6 +10,8 @@ import Image from "next/image";
 import { motion } from "motion/react";
 
 export default function Landing() {
+  const duration = 0.2;
+
   return (
     <section className="landing rounded-b-2xl relative max-lg:pb-[80px] max-lg:mb-[120px]">
       <div className="container mx-auto flex max-lg:flex-col items-center justify-between max-lg:justify-center p-8 max-lg:px-0">
@@ -17,7 +19,7 @@ export default function Landing() {
           <div className="content">
             <motion.span
               transition={{
-                duration: 0.5,
+                duration: duration,
               }}
               initial={{
                 opacity: 0,
@@ -30,8 +32,8 @@ export default function Landing() {
             </motion.span>
             <motion.h2
               transition={{
-                duration: 0.5,
-                delay: 0.5,
+                duration: duration,
+                delay: 0.2,
               }}
               initial={{
                 opacity: 0,
@@ -45,8 +47,8 @@ export default function Landing() {
             </motion.h2>
             <motion.div
               transition={{
-                duration: 0.5,
-                delay: 1,
+                duration: duration,
+                delay: 0.5,
               }}
               initial={{
                 opacity: 0,
@@ -67,8 +69,8 @@ export default function Landing() {
             </motion.div>
             <motion.div
               transition={{
-                duration: 0.5,
-                delay: 1.5,
+                duration: duration,
+                delay: 1,
               }}
               initial={{
                 opacity: 0,
@@ -121,8 +123,8 @@ export default function Landing() {
           <div className="card-content grid gap-4 w-[100%]">
             <motion.div
               transition={{
-                duration: 0.5,
-                delay: 2,
+                duration: duration,
+                delay: 1.5,
               }}
               initial={{
                 opacity: 0,
@@ -143,8 +145,8 @@ export default function Landing() {
               {leftSideCards.map((ele, index) => (
                 <motion.div
                   transition={{
-                    duration: 0.5,
-                    delay: 2.5,
+                    duration: duration,
+                    delay: 2,
                   }}
                   initial={{
                     opacity: 0,
