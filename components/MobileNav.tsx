@@ -16,8 +16,8 @@ export default function MobileNav({ active } : { active: boolean }) {
   `;
 
   return (
-    <div className="mobile-nav max-lg:block absolute w-[90%] left-2/4 -translate-x-2/4 top-[100%]">
-      <div className={`content w-full overflow-hidden bg-white shadow-md border-solid transition-all border-slate-300 rounded-md ${ active ? "h-[388px] p-6 border-2" : "h-0 p-0 border-0" }`}>
+    <div className="mobile-nav max-lg:block hidden absolute w-[90%] left-2/4 -translate-x-2/4 top-[100%]">
+      <div className={`content w-full overflow-hidden bg-white shadow-md border-solid transition-all border-slate-300 rounded-md ${ active ? "max-lg:h-[388px] max-lg:p-6 max-lg:border-2" : "max-lg:h-0 max-lg:p-0 max-lg:border-0" }`}>
         <ul className="main-list flex flex-col items-center gap-5">
           {listItems.map((ele, index) => (
             <li
