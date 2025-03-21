@@ -16,43 +16,45 @@ export default function Landing() {
         <div className="right max-lg:flex items-center gap-4 px-4">
           <div className="content">
             <motion.span
+              transition={{
+                duration: 0.5,
+              }}
               initial={{
                 opacity: 0,
                 transform: "translate(20px, 0)",
-                transition: {
-                  duration: 500,
-                  delay: 500,
-                },
               }}
               animate={{ opacity: 1, transform: "translate(0, 0)" }}
-            className="font-bold text-[#E2AE63] mb-2">
+              className="font-bold text-[#E2AE63] mb-2"
+            >
               الفعالية القادمة
             </motion.span>
             <motion.h2
-            initial={{
-              opacity: 0,
-              transform: "translate(20px, 0)",
-              transition: {
-                duration: 1000,
-                delay: 1000,
-              },
-            }}
-            animate={{ opacity: 1, transform: "translate(0, 0)" }}
-            className="title text-[32px] max-md:text-[18px] font-bold leading-[1.4] mb-4 text-white">
+              transition={{
+                duration: 0.5,
+                delay: 0.5,
+              }}
+              initial={{
+                opacity: 0,
+                transform: "translate(20px, 0)",
+              }}
+              animate={{ opacity: 1, transform: "translate(0, 0)" }}
+              className="title text-[32px] max-md:text-[18px] font-bold leading-[1.4] mb-4 text-white"
+            >
               المؤتمر العالمي للابحاث <br /> والمعلومات والابتكار في <br />{" "}
               القطاع الخيري (أبحاث)
             </motion.h2>
             <motion.div
-            initial={{
-              opacity: 0,
-              transform: "translate(20px, 0)",
-              transition: {
-                duration: 1500,
-                delay: 1500,
-              },
-            }}
-            animate={{ opacity: 1, transform: "translate(0, 0)" }}
-            className="event-details grid gap-2 max-md:text-[14px]">
+              transition={{
+                duration: 0.5,
+                delay: 1,
+              }}
+              initial={{
+                opacity: 0,
+                transform: "translate(20px, 0)",
+              }}
+              animate={{ opacity: 1, transform: "translate(0, 0)" }}
+              className="event-details grid gap-2 max-md:text-[14px]"
+            >
               {eventDetails.map((ele, index) => (
                 <div
                   className="detail-card flex items-center gap-2"
@@ -64,16 +66,17 @@ export default function Landing() {
               ))}
             </motion.div>
             <motion.div
-            initial={{
-              opacity: 0,
-              transform: "translate(20px, 0)",
-              transition: {
-                duration: 2000,
-                delay: 2500,
-              },
-            }}
-            animate={{ opacity: 1, transform: "translate(0, 0)" }}
-            className="action-btns flex gap-3 items-center mt-8 max-md:text-[14px]">
+              transition={{
+                duration: 0.5,
+                delay: 1.5,
+              }}
+              initial={{
+                opacity: 0,
+                transform: "translate(20px, 0)",
+              }}
+              animate={{ opacity: 1, transform: "translate(0, 0)" }}
+              className="action-btns flex gap-3 items-center mt-8 max-md:text-[14px]"
+            >
               {actionBtns.map((ele, index) => (
                 <button
                   type="button"
@@ -92,13 +95,13 @@ export default function Landing() {
           <div className="card-group flex max-lg:flex-col items-center gap-3 text-center mt-8">
             {cardsDetails.map((ele, index) => (
               <motion.div
+                transition={{
+                  duration: 0.5,
+                  delay: 2,
+                }}
                 initial={{
                   opacity: 0,
                   transform: "translate(10px, 0)",
-                  transition: {
-                    duration: 1000,
-                    delay: (index * 1000),
-                  },
                 }}
                 animate={{ opacity: 1, transform: "translate(0, 0)" }}
                 className="card w-[80px] h-[80px] max-md:w-[55px] max-md:h-[55px] bg-white rounded-md flex items-center justify-center flex-col"
@@ -117,16 +120,17 @@ export default function Landing() {
         <div className="left lg:mr-6">
           <div className="card-content grid gap-4 w-[100%]">
             <motion.div
-            initial={{
-              opacity: 0,
-              transform: "translate(-20px, 0)",
-              transition: {
-                duration: 1000,
-                delay: 1500,
-              },
-            }}
-            animate={{ opacity: 1, transform: "translate(0, 0)" }}
-            className="card w-full max-lg:my-5 max-lg:rounded-[0] p-8 rounded-lg backdrop-blur-xs bg-linear-to-r from-[#ffffff2a] to-[#e2ad636f]">
+              transition={{
+                duration: 0.5,
+                delay: 2,
+              }}
+              initial={{
+                opacity: 0,
+                transform: "translate(-20px, 0)",
+              }}
+              animate={{ opacity: 1, transform: "translate(0, 0)" }}
+              className="card w-full max-lg:my-5 max-lg:rounded-[0] p-8 rounded-lg backdrop-blur-xs bg-linear-to-r from-[#ffffff2a] to-[#e2ad636f]"
+            >
               <h3 className="text-[#E2AE63] font-bold mb-2">عن الفعاليه</h3>
               <p className="text-white leading-[1.5] text-[24px] max-lg:text-[18px]">
                 انطلاقاً من أهداف رؤيـة المملكـة العربيـة السعوديـة 2030 في
@@ -138,13 +142,13 @@ export default function Landing() {
             <div className="card-group grid gap-4 lg:grid-cols-2 max-lg:px-4 max-lg:absolute max-lg:bottom-[-100px] max-lg:left-2/4 max-lg:-translate-x-2/4 max-md:w-[360px]">
               {leftSideCards.map((ele, index) => (
                 <motion.div
+                  transition={{
+                    duration: 0.5,
+                    delay: 2.5,
+                  }}
                   initial={{
                     opacity: 0,
                     transform: "translate(-20px, 0)",
-                    transition: {
-                      duration: 1000,
-                      delay: 2500,
-                    },
                   }}
                   animate={{ opacity: 1, transform: "translate(0, 0)" }}
                   className={`card rounded-lg overflow-hidden h-[210px] flex items-center justify-center ${
