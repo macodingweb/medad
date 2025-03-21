@@ -25,7 +25,7 @@ export default function Navbar() {
   `;
 
   return (
-    <nav className="navbar relative lg:container mx-auto px-6 py-8 bg-white flex items-center justify-between flex-row-reverse">
+    <nav className="navbar relative lg:container mx-auto px-6 py-3 bg-white flex items-center justify-between flex-row-reverse">
       <button onClick={() => setIsActive(!isActive)} className="exchange-btn hidden text-[#E2AE63] max-lg:flex cursor-pointer w-[40px] rounded-md transition-all hover:text-white hover:bg-[#E2AE63] h-[40px] items-center justify-center">
         { isActive ? <IoMdClose size={32} className="text-inherit" /> : <IoMenu size={32} className="text-inherit" /> }
       </button>
@@ -41,7 +41,7 @@ export default function Navbar() {
           </li>
         )) }
       </ul>
-      <Image src={"/logo.png"} alt="Logo" width={180} height={180} />
+      <Image src={"/logo.png"} alt="Logo" width={160} height={160} />
       <MobileNav active={isActive} />
     </nav>
   )

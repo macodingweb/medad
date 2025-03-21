@@ -4,7 +4,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <main>
+    <main className="lg:p-4">
       <Navbar />
       { children }
     </main>
