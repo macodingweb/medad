@@ -36,7 +36,7 @@ export default function Navbar() {
       </div>
       <ul className="main-list flex items-center gap-5 max-lg:hidden">
         { listItems.map((ele, index) => (
-          <li className={`list-item relative cursor-pointer px-5 rounded-md text-[#E2AE63] overflow-hidden py-2 transition-all hover:before:w-full hover:before:h-full hover:text-white hover:rounded-tl-[0] hover:rounded-br-[0] ${listItemBefore}`} key={index}>
+          <li className={`list-item relative cursor-pointer px-5 rounded-md text-[#E2AE63] overflow-hidden py-2 transition-all hover:before:w-full hover:before:h-full hover:text-white hover:rounded-tl-[0] hover:rounded-br-[0] ${listItemBefore} hover:after:w-[10px] hover:after:h-[10px]`} key={index}>
             <Link href={ele.link} className={`text-inherit z-50 relative`}>{ele.text}</Link>
           </li>
         )) }
