@@ -153,7 +153,7 @@ export default function Landing() {
                     transform: "translate(-20px, 0)",
                   }}
                   animate={{ opacity: 1, transform: "translate(0, 0)" }}
-                  className={`card rounded-lg overflow-hidden h-[210px] flex items-center justify-center ${
+                  className={`card  overflow-hidden h-[210px] flex items-center justify-center ${
                     index == 1 && "max-lg:hidden"
                   }`}
                   key={index}
@@ -163,7 +163,7 @@ export default function Landing() {
                     alt="Card Image"
                     width={400}
                     height={400}
-                    className="object-cover h-full"
+                    className="object-cover h-full rounded-lg"
                   />
                 </motion.div>
               ))}
