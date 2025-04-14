@@ -15,8 +15,8 @@ export default function ModernActivities() {
           <ModernActivityCard key={index} data={ele} />
         )) }
       </div>
-      { showMore == 4 && (
-        <button type="button" onClick={() => setShowMore(8)} className="show-more-activities py-3 px-5 bg-[#E2AE63] text-neutral-950 font-bold mt-6 mx-auto rounded-md block cursor-pointer transition-all hover:bg-transparent hover:text-[#E2AE63] border-2 border-solid border-[#E2AE63]">جميع الفعاليات</button>
+      { showMore < moderActivities.length && (
+        <button type="button" onClick={() => setShowMore(showMore + 4)} className="show-more-activities py-3 px-5 bg-[#E2AE63] text-neutral-950 font-bold mt-6 mx-auto rounded-md block cursor-pointer transition-all hover:bg-transparent hover:text-[#E2AE63] border-2 border-solid border-[#E2AE63]">جميع الفعاليات</button>
       ) }
     </section>
   )
