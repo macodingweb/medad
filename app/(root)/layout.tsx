@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
 export default function RootLayout({
@@ -7,6 +8,7 @@ export default function RootLayout({
     <main className="lg:p-4 overflow-x-hidden">
       <Navbar />
       { children }
+      <Footer />
     </main>
   )
 }
