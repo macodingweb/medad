@@ -3,6 +3,7 @@ import AboutMedad from "@/components/AboutMedad";
 import Partners from "@/components/Partners";
 import ModernActivities from "@/components/ModernActivities";
 import Categories from "@/components/Catergories";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Partners />
       <ModernActivities />
       <Categories />
+      <Footer />
     </>
   );
 }
