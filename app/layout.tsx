@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import { Cairo } from "next/font/google"
 import "./globals.css";
+
+const cairo = Cairo({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: "المؤتمر العالمي للابحاث والمعلومات والابتكار في القطاع الخيري",
@@ -16,7 +19,7 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
-      <body>
+      <body className={`${cairo.className}`}>
         {children}
       </body>
     </html>
